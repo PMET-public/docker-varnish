@@ -3,5 +3,4 @@
 # runit script
 
 exec /usr/sbin/varnishd -d \
-  -f /etc/varnish/default.vcl \
-  -a :80
+  -f /etc/varnish/default.vcl
