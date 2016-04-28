@@ -1,5 +1,5 @@
-FROM esepublic/baseimage
-MAINTAINER Keith Bentrup <kbentrup@ebay.com>
+FROM esepublic/baseimage:0.9.18
+MAINTAINER Keith Bentrup <kbentrup@magento.com>
 
 RUN curl https://repo.varnish-cache.org/GPG-key.txt | apt-key add -
 RUN echo "deb https://repo.varnish-cache.org/ubuntu/ trusty varnish-4.1" >> /etc/apt/sources.list.d/varnish-cache.list
