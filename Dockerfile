@@ -6,7 +6,7 @@ COPY varnish-GPG-key.txt /
 RUN apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes apt-transport-https && \
   apt-key add /varnish-GPG-key.txt && \
-  echo "deb https://repo.varnish-cache.org/ubuntu/ trusty varnish-4.1" >> /etc/apt/sources.list.d/varnish-cache.list && \
+  echo "deb https://repo.varnish-cache.org/debian/ jessie varnish-4.1" >> /etc/apt/sources.list.d/varnish-cache.list && \
   DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes varnish && \
   apt-get --purge autoremove -y apt-transport-https && \
   apt-get clean && \
