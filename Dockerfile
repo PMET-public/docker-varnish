@@ -1,11 +1,11 @@
 FROM debian:latest
 MAINTAINER Keith Bentrup <kbentrup@magento.com>
 
-COPY varnish-GPG-key.txt /
+COPY varnish.gpg /
 
 RUN apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes apt-transport-https && \
-  apt-key add /varnish-GPG-key.txt && \
+  apt-key add /varnish.gpg && \
   echo "deb https://repo.varnish-cache.org/debian/ jessie varnish-4.1" >> /etc/apt/sources.list.d/varnish-cache.list && \
   apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes varnish && \
