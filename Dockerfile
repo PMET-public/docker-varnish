@@ -15,4 +15,4 @@ RUN apt-get update && \
   
 EXPOSE 80
 
-CMD /usr/sbin/varnishd -f /etc/varnish/default.vcl -F
+CMD /usr/sbin/varnishd -f /etc/varnish/default.vcl -p feature=+esi_ignore_https -F
