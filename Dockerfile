@@ -13,6 +13,8 @@ RUN apt-get update && \
   apt-get clean && \
   rm -rf /var/lib/{apt,dpkg,cache,log}/ /tmp/* /var/tmp/*
   
-EXPOSE 80
+ENTRYPOINT ["/usr/sbin/varnishd", "-F"]
 
-CMD /usr/sbin/varnishd -f /etc/varnish/default.vcl -F
+CMD ["-f", "/etc/varnish/default.vcl"]
+
+EXPOSE 80
