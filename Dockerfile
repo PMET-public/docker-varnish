@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:jessie
 MAINTAINER Keith Bentrup <kbentrup@magento.com>
 
 COPY varnish.gpg /
